@@ -23,8 +23,8 @@ public class UserService {
     }
 
     public List<UsersEntity> getAllUsers() throws Exception {
-        return usersRepository.findAll();
-        //throw new Exception("not implemented");
+        //return usersRepository.findAll();
+        throw new Exception("not implemented");
     }
 
     public UsersEntity getUserById(int id) throws Exception{
