@@ -10,6 +10,7 @@ import java.util.List;
 
 @Service
 public class UserService {
+
     private final UsersRepository usersRepository;
 
     @Autowired
@@ -17,32 +18,32 @@ public class UserService {
         this.usersRepository = usersRepository;
     }
 
-    public UsersEntity addUser(UsersEntity user) throws Exception {
-        //return usersRepository.save(user);
-        throw new Exception("not implemented");
+    public List<UsersEntity> getAllUsers() throws Exception {
+        return usersRepository.findAll();
+        //throw new Exception("not implemented");
     }
 
-    public List<UsersEntity> getAllUsers() throws Exception {
-        //return usersRepository.findAll();
-        throw new Exception("not implemented");
+    public UsersEntity addUser(UsersEntity user) throws Exception {
+        return usersRepository.save(user);
+        //throw new Exception("not implemented");
     }
 
     public UsersEntity getUserById(int id) throws Exception{
-        //return usersRepository.findById(id)
-               // .orElseThrow(() -> new IllegalArgumentException("User not found with id: " + id));
-        throw new Exception("not implemented");
+        return usersRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("User not found with id: " + id));
+        //throw new Exception("not implemented");
     }
 
     public UsersEntity getUserByEmail(String email) throws Exception {
 
-        //return usersRepository.findByEmail(email);
-        throw new Exception();
+        return usersRepository.findByEmail(email);
+        //throw new Exception();
     }
 
-    public List<UsersEntity> getUsersBySexe(SexeEntity sexe) throws Exception {
+    public List<UsersEntity> getUsersBySexe(int sexeId) throws Exception {
 
-        //return usersRepository.findBySexe(sexe);
-        throw new Exception();
+        return usersRepository.findBySexe(new SexeEntity());
+        //throw new Exception();
     }
 
     public void deleteUser(int id) throws Exception {
@@ -51,7 +52,7 @@ public class UserService {
         throw new Exception();
     }
 
-    public void deactivateUser(int id) throws Exception {
+    public UsersEntity deactivateUser(int id) throws Exception {
         //UsersEntity user = usersRepository.findById(id)
         //        .orElseThrow(() -> new IllegalArgumentException("User not found with id: " + id));
         //user.setIsActive("false");

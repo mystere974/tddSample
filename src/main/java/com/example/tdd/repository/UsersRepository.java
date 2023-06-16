@@ -8,6 +8,6 @@ import java.util.List;
 
 public interface UsersRepository extends JpaRepository<UsersEntity, Integer> {
     UsersEntity findByEmail(String email);
-    List<UsersEntity> findBySexe(SexeEntity sexe);
+    List<UsersEntity> findBySexe(SexeEntity sexeId);
 }
 

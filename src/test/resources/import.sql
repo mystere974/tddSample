@@ -5,3 +5,4 @@ INSERT INTO tddsample.users (idusers, email, name, lastname, phonenumber, birthd
 INSERT INTO tddsample.users (idusers, email, name, lastname, phonenumber, birthday, is_active) VALUES (3, 'michael@example.com', 'Michael', 'Johnson', '5555555555', '1985-12-15', 'true');
 INSERT INTO tddsample.users (idusers, email, name, lastname, phonenumber, birthday, is_active) VALUES (4, 'emily@example.com', 'Emily', 'Brown', '1111111111', '1992-09-20', 'true');
 INSERT INTO tddsample.users (idusers, email, name, lastname, phonenumber, birthday, is_active) VALUES (5, 'david@example.com', 'David', 'Wilson', '9999999999', '1988-06-25', 'true');
+INSERT INTO tddsample.users (idusers, email, name, lastname, phonenumber, birthday, is_active) VALUES (5, 'david1@example.com', 'Davido', 'Wilsonn', '19999999999', '1985-06-25', 'false');

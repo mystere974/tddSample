@@ -28,9 +28,6 @@ public class SexeEntity {
     private Sexe sexe;
 
 
-    @OneToMany(mappedBy = "sexe")
-    private List<UsersEntity> users;
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
